@@ -1,0 +1,64 @@
+/* ................................. */
+/* Sección de valores corporativos */
+/* ................................. */
+
+.about-us {
+  padding-top: 94px;
+
+  &__titles {
+    color: var(--black);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+
+  &__container {
+    background-color: #f5f4fa;
+    width: 100%;
+    height: 120px;
+    border-radius: 4px;
+    padding: 25px calc((100% - 70px)/2);
+  }
+
+  &__icon {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+.about-us__list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 0;
+  justify-content: space-between;
+
+  & > li {
+    width: 270px;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .about-us__list {
+    justify-content: center;
+
+    & > li {
+      width: calc(50% - 30px);
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-us__list {
+    justify-content: center;
+
+    & > li {
+      width: calc(100% - 30px);
+    }
+  }
+}

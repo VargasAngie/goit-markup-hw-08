@@ -1,0 +1,95 @@
+/* .................................... */
+/* Sección de presentación del equipo */
+/* .................................... */
+
+.team {
+  padding: 94px 0;
+  background-color: #f5f4fa;
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  &__name {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--black);
+  }
+
+  &__job {
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
+}
+
+.team__item {
+  background-color: var(--white);
+  width: 270px;
+
+  & > div {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .team__list {
+    justify-content: center;
+  }
+
+  .team__item {
+    width: calc(50% - 30px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .team__list {
+    justify-content: center;
+  }
+
+  .team__item {
+    width: calc(100% - 30px);
+  }
+}
+
+.social-link {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0 32px 30px;
+}
+
+.social-link__icon {
+  width: 20px;
+  height: 20px;
+  fill: #afb1b8;
+
+  .social-link__box:hover &,
+  .social-link__box:focus & {
+    fill: var(--white);
+  }
+}
+
+.social-link__box {
+  width: 44px;
+  height: 44px;
+  border: 1px;
+  border-radius: 100px;
+  padding: 12px;
+
+  &:hover,
+  &:focus {
+    background-color: var(--high-lighted);
+    cursor: pointer;
+  }
+}

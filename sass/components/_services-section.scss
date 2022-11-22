@@ -1,0 +1,41 @@
+/* ................................. */
+/* Sección de servicios */
+/* ................................. */
+
+.services-section {
+  padding: 94px 0;
+
+  &__list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+}
+
+.thumb {
+  position: relative;
+  width: 370px;
+  height: 294px;
+
+  &__text {
+    @extend %text-format;
+  }
+}
+
+.text--overlay {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  background-color: rgba(47, 48, 58, 0.8);
+  height: 70px;
+  width: 370px;
+  padding: 27px 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .services-section {
+    display: none;
+  }
+}
