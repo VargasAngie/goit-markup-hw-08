@@ -78,7 +78,6 @@
   }
 }
 
-
 .contact {
   text-decoration: none;
   font-weight: 500;
@@ -123,12 +122,142 @@
   }
 }
 
-@media screen and (min-width: 481px) and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .contact-list {
     flex-direction: column;
 
     &__item:not(:last-child) {
       margin-bottom: 10px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .menu {
+    display: none;
+  }
+}
+
+.menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 48px 40px;
+  background-color: #fff;
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: #212121;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  color: var(--high-lighted);
+}
+
+.mobile-menu {
+  padding: 0 0 306px;
+  margin: 0;
+  list-style: none;
+
+  &__link {
+    display: block;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    letter-spacing: 0.02em;
+    color: #212121;
+    margin-bottom: 32px;
+
+    &:hover,
+    &:focus {
+      color: var(--high-lighted);
+    }
+  }
+}
+
+.mobile {
+  &-email {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    color: var(--text);
+  }
+
+  &-telephone {
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 40px;
+    letter-spacing: 0.02em;
+    color: var(--high-lighted);
+  }
+
+  &-contacts {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 64px;
+
+    & a {
+      text-decoration: none;
+    }
+
+    & li {
+      margin-bottom: 32px;
+    }
+  }
+
+  &-social-media {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+
+    & li {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: 0.02em;
+      color: var(--high-lighted);
+    }
+
+    & li:not(:last-child) {
+      margin-right: 10px;
     }
   }
 }

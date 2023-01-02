@@ -43,7 +43,7 @@
     width: 270px;
   }
 }
-@media screen and (min-width: 481px) and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .about-us__list {
     justify-content: center;
 
@@ -53,7 +53,7 @@
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .about-us__list {
     justify-content: center;
 

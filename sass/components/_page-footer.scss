@@ -9,9 +9,27 @@
     list-style: none;
     padding: 0;
   }
+}
 
-  &__box {
+@media screen and (max-width: 767px) {
+   .footer--style {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__box {
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
   }
 }
