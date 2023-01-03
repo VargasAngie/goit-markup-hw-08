@@ -31,7 +31,7 @@
 .navigation {
   list-style: none;
   display: flex;
-  margin-right: 344px;
+  margin-right: 339px;
 
   &__item:not(:last-child) {
     margin-right: 50px;
@@ -129,6 +129,10 @@
     &__item:not(:last-child) {
       margin-bottom: 10px;
     }
+  }
+
+  .navigation {
+    margin-right: 0;
   }
 }
 

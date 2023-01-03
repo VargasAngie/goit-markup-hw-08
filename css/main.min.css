@@ -73,7 +73,7 @@ body {
 .navigation {
   list-style: none;
   display: flex;
-  margin-right: 344px;
+  margin-right: 339px;
 }
 .navigation__item:not(:last-child) {
   margin-right: 50px;
@@ -158,6 +158,9 @@ body {
   }
   .contact-list__item:not(:last-child) {
     margin-bottom: 10px;
+  }
+  .navigation {
+    margin-right: 0;
   }
 }
 @media (max-width: 767px) {
@@ -281,7 +284,7 @@ body {
 .beginning {
   background-color: #2f303a;
   padding: 200px 0;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/initial.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/initial.png);
   background-size: cover;
 }
 .beginning__title {
@@ -309,6 +312,11 @@ body {
   padding: 10px 32px;
 }
 
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .beginning {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/initial@2x.png);
+  }
+}
 /* ...................... */
 /* Ventana modal */
 /* ...................... */
@@ -739,22 +747,6 @@ body {
   padding: 0;
 }
 
-@media screen and (max-width: 767px) {
-  .footer--style {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .footer__box {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
 .footer--style {
   padding: 60px 0;
 }
@@ -841,6 +833,68 @@ body {
   line-height: 30px;
 }
 
+@media screen and (max-width: 767px) {
+  .footer--style {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .footer__box address {
+    margin-bottom: 60px;
+  }
+  .subscribe {
+    margin-top: 60px;
+  }
+  .subscribe__input {
+    width: 450px;
+    margin-bottom: 20px;
+  }
+  .subscribe__label {
+    display: block;
+  }
+  .subscribe__btn {
+    display: block;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer--style {
+    padding: 60px 76px;
+  }
+  .footer__box {
+    position: relative;
+  }
+  .social-media {
+    position: absolute;
+    right: 76px;
+    top: 0;
+  }
+  .subscribe {
+    text-align: center;
+    margin-top: 60px;
+  }
+  .subscribe__input {
+    width: 450px;
+    margin-bottom: 20px;
+  }
+  .subscribe__label {
+    display: block;
+    text-align: center;
+  }
+  .subscribe__btn {
+    display: block;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 /* .................................... */
 /* PORTAFOLIO */
 /* .................................... */
@@ -896,6 +950,11 @@ body {
   padding: 0;
 }
 
+@media screen and (max-width: 767px) {
+  .projects__list {
+    justify-content: center;
+  }
+}
 .projects__list li {
   border: 1px solid #eeeeee;
 }
